@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 $username = $_POST['username'];
 
@@ -19,16 +19,11 @@ $subtotal2 = $number2*4;
 $subtotal3 = $number3*6;
 
 $totalcost = $subtotal1+$subtotal2+$subtotal3+$shipping;
-echo "<h1>Your order information</h1>";
-echo "User Name: " . $username . "<br>";
-echo "Password: " . $password . "<br>";
-echo "subtotal1: " . $subtotal1 . "<br>";
-echo "subtotal2: " . $subtotal2 . "<br>";
-echo "subtotal3: " . $subtotal3 . "<br>";
-echo "totalcost: " . $totalcost . "<br>";
-echo "shipping: " . $shipping . "<br>";
 
-    echo "<table border=\"1\">";
+echo "<center><div><h1 id='Order'style='color:blue;'>Your order information</h1>";
+echo "<p>User Name: " . $username . "</p>";
+echo "<p>Password: " . $password . "</p></div></center>";
+    echo "<center><table border=\"1\">";
         for ($r =0; $r <= 5; $r++)
         {
             echo'<tr>';
@@ -38,9 +33,21 @@ echo "shipping: " . $shipping . "<br>";
               {
                 echo '<th>' ."".'</th>';
               }
-              else if($c==0 && $r<=3)//The first title column
+              else if($c==0)//The first title column
               {
-                echo '<th>' ."Item ".$r. '</th>';
+                if($r==1)
+                {
+                  echo '<th>' ."Apple". '</th>';
+                }
+                else if($r==2)
+                {
+                  echo '<th>' ."Pen". '</th>';
+                }
+                else if($r==3)
+                {
+                  echo '<th>' ."Pineapple". '</th>';
+                }
+                
               }
               else if($r==0)//The first title row
               {
@@ -142,11 +149,5 @@ echo "shipping: " . $shipping . "<br>";
             }
            echo '</tr>'; // close tr tag here
         }
-        // echo'<tr>';
-        //     echo '<td>' ."Shipping".'</td>';
-        //     echo '<td>' ."Express".'</td>';
-        //     echo '<td>' ."20".'</td>';
-        // echo'</tr>';
-
-    echo"</table>";
+    echo"</table></center>";
 ?>
