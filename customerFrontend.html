@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>Coustomer</title>
+			<center>
+                <h1 id= "headline" center>Welcome to my PPAP Store!</h1>
+            </center>
+            <img id="pic" src="webstore.jpg">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="formChecker.js"></script>
+	</head>
+
+	<body id="bodytop">
+        <form action="customerBackend.php" method="post" onsubmit="return checker()">
+            <div id="acount" style = "position: absolute; left:50px; top:100px">
+                User name: <input type=email id="username" name="username" style="width: 140px;" maxlength="20">
+                password: <input type=password id="password" name="password" style="width: 120px;" minlength="8" maxlength="16">
+            </div>
+            <div id= "product1" style = "position: absolute; left:100px; top:150px">
+                <div id ="001">
+                    <img src="1.jpg" height="200" >
+                    <p>Price: $2.00</p>
+                </div>
+                <div>
+                    The number of Items: <input type="number" id="number1" name="number1" value = "0" style="width: 50px;" min="0" max="99"><br /><br/>
+                </div>
+            </div>
+
+            <div id= "product2" style = "position: absolute; left:400px; top:150px">
+                <div id ="002">
+                    <img src="2.jpg" height="200">
+                    <p>Price: $4.00</p>
+                </div>
+                <div>
+                    The number of Items: <input type="number" id="number2" name="number2" value = "0" style="width: 50px;" min="0" max="99"><br /><br/>
+                </div>
+            </div>
+
+            <div id= "product3" style = "position: absolute; left:700px; top:150px">
+                <div id ="003">
+                    <img src="3.jpg" height="200">
+                    <p>Price: $6.00</p>
+                </div>
+                <div>
+                    The number of Items: <input type="number" id="number3" name="number3" value = "0" style="width: 50px;" min="0" max="99"><br /><br/>
+                </div>
+            </div>
+            <div style = "position: absolute; left:200px; top:550px">
+                Types of shipping:
+                <select id = "shipping" name="shipping">
+                    <option value="0">Free 7 day</option>
+                    <option value="50">$50.00 over night</option>
+                    <option value="5">$5.00 three day</option>
+                </select>  
+            </div>
+            <input type="submit" value="Submit" style = "position: absolute; left:200px; top:570px" >
+            <input type="reset" value="reset" style = "position: absolute; left:280px; top:570px" >
+        </form>
+	</body>
+</html>
