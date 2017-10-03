@@ -21,8 +21,8 @@ $subtotal3 = $number3*6;
 $totalcost = $subtotal1+$subtotal2+$subtotal3+$shipping;
 
 echo "<center><div><h1 id='Order'style='color:blue;'>Your order information</h1>";
-echo "<p>User Name: " . $username . "</p>";
-echo "<p>Password: " . $password . "</p></div></center>";
+echo "<p style='color:blue;'>User Name: " . $username . "</p>";
+echo "<p style='color:blue;'>Password: " . $password . "</p></div></center>";
     echo "<center><table border=\"1\">";
         for ($r =0; $r <= 5; $r++)
         {
@@ -31,21 +31,21 @@ echo "<p>Password: " . $password . "</p></div></center>";
             {
               if($r==0 && $c==0)//blank
               {
-                echo '<th>' ."".'</th>';
+                echo '<th style="background-color:#08F308;">' ."".'</th>';
               }
               else if($c==0)//The first title column
               {
                 if($r==1)
                 {
-                  echo '<th>' ."Apple". '</th>';
+                  echo '<th style="background-color:#08F308;">' ."Apple". '</th>';
                 }
                 else if($r==2)
                 {
-                  echo '<th>' ."Pen". '</th>';
+                  echo '<th style="background-color:#08F308;">' ."Pen". '</th>';
                 }
                 else if($r==3)
                 {
-                  echo '<th>' ."Pineapple". '</th>';
+                  echo '<th style="background-color:#08F308;">' ."Pineapple". '</th>';
                 }
                 
               }
@@ -53,64 +53,64 @@ echo "<p>Password: " . $password . "</p></div></center>";
               {
                   if($c==1)
                   {
-                    echo '<th>' ."Quantity".'</th>';
+                    echo '<th style="background-color:#08F308;">' ."Quantity".'</th>';
                   }
                   else if($c==2)
                   {
-                    echo '<th>' ."Cost Per Item".'</th>';
+                    echo '<th style="background-color:#08F308;">' ."Cost Per Item".'</th>';
                   }
                   else if($c==3)
                   {
-                    echo '<th>' ."Sub Total".'</th>';
+                    echo '<th style="background-color:#08F308;">' ."Sub Total".'</th>';
                   }
               }
               else if($c==1)//Quantity column
               {
                 if($r==1)
                 {
-                  echo '<td>' .$number1.'</td>';
+                  echo '<td style="background-color: #FCE309;">' .$number1.'</td>';
                 }
                 else if($r==2)
                 {
-                  echo '<td>' .$number2.'</td>';
+                  echo '<td style="background-color: #FCE309;">' .$number2.'</td>';
                 }
                 else if($r==3)
                 {
-                  echo '<td>' .$number3.'</td>';
+                  echo '<td style="background-color: #FCE309;">' .$number3.'</td>';
                 }
               }
               else if($c==2)//The Cost per Item column
               {
                 if($r==1)
                 {
-                  echo '<td>' ."$2.00".'</td>';
+                  echo '<td style="background-color: #FCE309;">' ."$2.00".'</td>';
                 }
                 else if($r==2)
                 {
-                  echo '<td>' ."$4.00".'</td>';
+                  echo '<td style="background-color: #FCE309;">' ."$4.00".'</td>';
                 }
                 else if($r==3)
                 {
-                  echo '<td>' ."$6.00".'</td>';
+                  echo '<td style="background-color: #FCE309;">' ."$6.00".'</td>';
                 }
               }
               else if($c==3)//the sub total column
               {
                 if($r==1)
                 {
-                  echo '<td>' ."$".$subtotal1.'</td>';
+                  echo '<td style="background-color: #FCE309;">' ."$".$subtotal1.'</td>';
                 }
                 else if($r==2)
                 {
-                  echo '<td>' ."$".$subtotal2.'</td>';
+                  echo '<td style="background-color: #FCE309;">' ."$".$subtotal2.'</td>';
                 }
                 else if($r==3)
                 {
-                  echo '<td>' ."$".$subtotal3.'</td>';
+                  echo '<td style="background-color: #FCE309;">' ."$".$subtotal3.'</td>';
                 }
                 else if($r==4)
                 {
-                  echo '<td>' ."$".$shipping.'</td>';
+                  echo '<td style="background-color: #FCE309;">' ."$".$shipping.'</td>';
                 }
               }
               if($r==4)//the shipping row
@@ -119,31 +119,31 @@ echo "<p>Password: " . $password . "</p></div></center>";
                   {
                     if($shipping==0)
                     {
-                        echo '<td colspan="2">' ."Free 7 day".'</td>';
+                        echo '<td colspan="2" style="background-color: #FCE309;">' ."Free 7 day".'</td>';
                     }
                     else if($shipping==50)
                     {
-                        echo '<td colspan="2">' ."Over night".'</td>';
+                        echo '<td colspan="2" style="background-color: #FCE309;">' ."Over night".'</td>';
                     }
                     else if($shipping==5)
                     {
-                        echo '<td colspan="2">' ."Three day".'</td>';
+                        echo '<td colspan="2" style="background-color: #FCE309;">' ."Three day".'</td>';
                     }
                   }
                   else if($c==0)
                   {
-                    echo '<th>' ."Shipping".'</th>';
+                    echo '<th style="background-color:#08F308;">' ."Shipping".'</th>';
                   }
               }
               else if($r==5)//the last total cost row
               {
                 if($c==0)
                 {
-                    echo '<th colspan="3">' ."Total Cost".'</th>';
+                    echo '<th colspan="3" style="background-color:#08F308;">' ."Total Cost".'</th>';
                 }
                 else if($c==1)
                 {
-                    echo '<td>' ."$".$totalcost.'</td>';
+                    echo '<td style="background-color: #FCE309;">' ."$".$totalcost.'</td>';
                 }
               }
             }
